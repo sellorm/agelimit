@@ -1,0 +1,23 @@
+on:
+  push:
+    branches: [main, master]
+    tags: ['*']
+
+name: pkgdown
+
+jobs:
+  pkgdown:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '>=1.19' # The Go version to download (if necessary) and use.
+      - run: make
+    steps:
+      - uses: actions/upload-artifact@v3
+        with:
+          name: binary-builds
+          path: builds/
