@@ -1,5 +1,7 @@
 # agelimit
 
+[![binary builds](https://github.com/sellorm/agelimit/actions/workflows/builds.yaml/badge.svg)](https://github.com/sellorm/agelimit/actions/workflows/builds.yaml)
+
 Quickly test a file against an age limit in your shell scripts
 
 ## Examples
