@@ -2,7 +2,7 @@ version = 0.0.1
 deps_darwin = main.go ctime_darwin.go
 deps_darwin = main.go ctime_linux.go
 
-build-all: build-mac-amd64 build-mac-arm64 build-linux-amd64 build-linux-arm64
+build-all: build-darwin-amd64 build-darwin-arm64 build-linux-amd64 build-linux-arm64
 
 build-darwin-amd64: $(deps_darwin)
 	[ -d ./builds/darwin/amd64 ] || mkdir -p ./builds/darwin/amd64

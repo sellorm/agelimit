@@ -3,7 +3,7 @@ on:
     branches: [main, master]
     tags: ['*']
 
-name: pkgdown
+name: build binaries
 
 jobs:
   build:
